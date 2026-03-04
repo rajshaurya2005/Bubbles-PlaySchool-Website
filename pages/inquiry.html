@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get in touch with Bubbles Playschool. Fill our inquiry form for admissions in Playgroup, Nursery, PP1, and PP2 programs.">
+    <title>Inquiry | Bubbles Playschool</title>
+
+    <link rel="icon" href="../images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- EmailJS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+
+    <!-- === NAVIGATION BAR === -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/logo.png" alt="Bubbles Playschool Logo">
+                <span>Bubbles <span class="logo-accent">Playschool</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="inquiry.html" class="nav-link active">Inquiry</a></li>
+            </ul>
+            <a href="inquiry.html" class="btn btn-primary nav-cta">Enquire Now</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <!-- === END NAVBAR === -->
+
+    <main>
+
+        <!-- === PAGE HERO === -->
+        <section class="page-hero">
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-3"></div>
+            <div class="bubble bubble-5"></div>
+            <h1 class="page-hero-title">Get in Touch</h1>
+            <p class="page-hero-breadcrumb"><a href="../index.html">Home</a> / Inquiry</p>
+        </section>
+
+        <!-- === INQUIRY CONTENT === -->
+        <section class="section inquiry-content">
+            <div class="inquiry-intro fade-in">
+                <h2 class="section-title">We'd love to hear from you!</h2>
+                <p class="section-subtitle">We'd love to welcome your child to Bubbles! Fill in the form below and we'll
+                    get back to you within 24 hours.</p>
+            </div>
+
+            <div class="inquiry-grid">
+
+                <!-- Form Column -->
+                <div class="inquiry-form-card fade-in fade-in-delay-1">
+                    <h3><i class="fas fa-paper-plane"></i> Application Form</h3>
+
+                    <!-- Success Message (Hidden by default) -->
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Thank You!</h3>
+                        <p>Your inquiry has been sent successfully. Our team will contact you shortly regarding
+                            admissions.</p>
+                        <button class="btn btn-primary mt-4" style="margin-top:20px;"
+                            onclick="window.location.reload();">Submit Another Inquiry</button>
+                    </div>
+
+                    <!-- Form -->
+                    <form id="inquiryForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="parent_name">Parent/Guardian Name <span
+                                        class="required">*</span></label>
+                                <input type="text" id="parent_name" name="parent_name" class="form-input"
+                                    placeholder="Enter your full name" required>
+                                <span class="error-text"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="child_name">Child's Name <span
+                                        class="required">*</span></label>
+                                <input type="text" id="child_name" name="child_name" class="form-input"
+                                    placeholder="Enter your child's name" required>
+                                <span class="error-text"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="child_dob">Child's Date of Birth <span
+                                        class="required">*</span></label>
+                                <input type="date" id="child_dob" name="child_dob" class="form-input" required>
+                                <span class="error-text"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="program">Program Interested In <span
+                                        class="required">*</span></label>
+                                <select id="program" name="program" class="form-select" required>
+                                    <option value="" disabled selected>Select a program</option>
+                                    <option value="Playgroup">Playgroup (1.5 - 2.5 yrs)</option>
+                                    <option value="Nursery">Nursery (2.5 - 3.5 yrs)</option>
+                                    <option value="PP1">PP1 (3.5 - 4.5 yrs)</option>
+                                    <option value="PP2">PP2 (4.5 - 5.5 yrs)</option>
+                                </select>
+                                <span class="error-text"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="phone">Phone Number <span
+                                        class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" class="form-input"
+                                    placeholder="10-digit mobile number" required>
+                                <span class="error-text"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email Address <span
+                                        class="required">*</span></label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="Enter your email address" required>
+                                <span class="error-text"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message / Additional Info</label>
+                            <textarea id="message" name="message" class="form-textarea"
+                                placeholder="Any questions or specific requirements?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit" style="width: 100%;">
+                            Submit Inquiry <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact & Map Column -->
+                <div class="inquiry-contact-card fade-in fade-in-delay-2">
+                    <h3><i class="fas fa-address-card"></i> Contact Details</h3>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <!-- TODO: Add actual phone -->
+                            <p>+91 XXXXX XXXXX<br>+91 XXXXX XXXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <!-- TODO: Add actual email -->
+                            <p>info@bubblesplayschool.com<br>admissions@bubblesplayschool.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon - Fri: 8:30 AM to 4:00 PM<br>Saturday: 9:00 AM to 1:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Address</h4>
+                            <!-- TODO: Add actual address -->
+                            <p>123 Education Lane,<br>Knowledge City Phase 1,<br>Your City, State 123456</p>
+                        </div>
+                    </div>
+
+                    <!-- Map Embed -->
+                    <div class="inquiry-map">
+                        <!-- TODO: Replace with actual Google Maps embed link -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1714402636652!5m2!1sen!2sin"
+                            title="Bubbles Playschool Location" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="../images/logo.png" alt="Bubbles Playschool">
+                <p class="footer-tagline">Where Little Stars Shine ⭐</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="inquiry.html">Inquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
+                <p><i class="fas fa-envelope"></i> info@bubblesplayschool.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bubbles Playschool, Your City, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bubbles Playschool. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- === END FOOTER === -->
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/form.js"></script>
+
+</body>
+
+</html>

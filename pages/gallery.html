@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Take a look at the vibrant learning environment at Bubbles Playschool through our photo gallery.">
+    <title>Gallery | Bubbles Playschool</title>
+
+    <link rel="icon" href="../images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <!-- === NAVIGATION BAR === -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/logo.png" alt="Bubbles Playschool Logo">
+                <span>Bubbles <span class="logo-accent">Playschool</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="inquiry.html" class="nav-link">Inquiry</a></li>
+            </ul>
+            <a href="inquiry.html" class="btn btn-primary nav-cta">Enquire Now</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <!-- === END NAVBAR === -->
+
+    <main>
+
+        <!-- === PAGE HERO === -->
+        <section class="page-hero">
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-3"></div>
+            <div class="bubble bubble-5"></div>
+            <h1 class="page-hero-title">Our Gallery</h1>
+            <p class="page-hero-breadcrumb"><a href="../index.html">Home</a> / Gallery</p>
+        </section>
+
+        <!-- === GALLERY FILTER & GRID === -->
+        <section class="section">
+            <div class="container">
+
+                <!-- Filter Buttons -->
+                <div class="gallery-filters fade-in">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="classrooms">Classrooms</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                    <button class="filter-btn" data-filter="playarea">Play Area</button>
+                    <button class="filter-btn" data-filter="art">Art & Crafts</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid fade-in fade-in-delay-1" id="galleryGrid">
+
+                    <!-- Classrooms -->
+                    <div class="gallery-item" data-category="classrooms">
+                        <a href="../images/gallery/classroom-1.jpg" class="glightbox" data-gallery="bubbles-gallery"
+                            data-title="Colorful Learning Center">
+                            <img src="../images/gallery/classroom-1.jpg" alt="Colorful Learning Center">
+                            <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-category="classrooms">
+                        <a href="../images/gallery/classroom-2.jpg" class="glightbox" data-gallery="bubbles-gallery"
+                            data-title="Reading Corner">
+                            <img src="../images/gallery/classroom-2.jpg" alt="Reading Corner">
+                            <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-category="classrooms">
+                        <a href="../images/gallery/classroom-3.jpg" class="glightbox" data-gallery="bubbles-gallery"
+                            data-title="Activity Table">
+                            <img src="../images/gallery/classroom-3.jpg" alt="Activity Table">
+                            <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+                        </a>
+                    </div>
+
+                    <!-- Events -->
+                    <div class="gallery-item" data-category="events">
+                        <a href="../images/gallery/event-1.jpg" class="glightbox" data-gallery="bubbles-gallery"
+                            data-title="Annual Day Celebration">
+                            <img src="../images/gallery/event-1.jpg" alt="Annual Day Celebration">
+                            <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="../images/gallery/event-2.jpg" class="glightbox" data-gallery="bubbles-gallery"
+                            data-title="Sports Day">
+                            <img src="../images/gallery/event-2.jpg" alt="Sports Day">
+                            <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-category="events">
+                        <a href="../images/gallery/event-3.jpg" class="glightbox" data-gallery="bubbles-gallery"
+                            data-title="Festival Celebration">
+                            <img src="../images/gallery/event-3.jpg" alt="Festival Celebration">
+                            <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+                        </a>
+                    </div>
+
+                    <!-- Play Area -->
+                    <div class="gallery-item" data-category="playarea">
+                        <a href="../images/gallery/playarea-1.jpg" class="glightbox" data-gallery="bubbles-gallery"
+                            data-title="Outdoor Playground">
+                            <img src="../images/gallery/playarea-1.jpg" alt="Outdoor Playground">
+                            <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-category="playarea">
+                        <a href="../images/gallery/playarea-2.jpg" class="glightbox" data-gallery="bubbles-gallery"
+                            data-title="Sand Pit">
+                            <img src="../images/gallery/playarea-2.jpg" alt="Sand Pit">
+                            <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-category="playarea">
+                        <a href="../images/gallery/playarea-3.jpg" class="glightbox" data-gallery="bubbles-gallery"
+                            data-title="Indoor Soft Play">
+                            <img src="../images/gallery/playarea-3.jpg" alt="Indoor Soft Play">
+                            <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+                        </a>
+                    </div>
+
+                    <!-- Art -->
+                    <div class="gallery-item" data-category="art">
+                        <a href="../images/gallery/art-1.jpg" class="glightbox" data-gallery="bubbles-gallery"
+                            data-title="Finger Painting">
+                            <img src="../images/gallery/art-1.jpg" alt="Finger Painting">
+                            <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-category="art">
+                        <a href="../images/gallery/art-2.jpg" class="glightbox" data-gallery="bubbles-gallery"
+                            data-title="Clay Modeling">
+                            <img src="../images/gallery/art-2.jpg" alt="Clay Modeling">
+                            <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-category="art">
+                        <a href="../images/gallery/art-3.jpg" class="glightbox" data-gallery="bubbles-gallery"
+                            data-title="Craft Time">
+                            <img src="../images/gallery/art-3.jpg" alt="Craft Time">
+                            <div class="gallery-overlay"><i class="fas fa-expand-arrows-alt"></i></div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="../images/logo.png" alt="Bubbles Playschool">
+                <p class="footer-tagline">Where Little Stars Shine ⭐</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="inquiry.html">Inquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
+                <p><i class="fas fa-envelope"></i> info@bubblesplayschool.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bubbles Playschool, Your City, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bubbles Playschool. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- === END FOOTER === -->
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="../js/gallery.js"></script>
+
+</body>
+
+</html>

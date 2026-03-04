@@ -1,0 +1,197 @@
+/* =============================================
+   RESPONSIVE STYLESHEET — Bubbles Playschool
+   Mobile-first: base styles in styles.css
+   ============================================= */
+
+/* =============================================
+   TABLET — 768px and above
+   ============================================= */
+@media (min-width: 768px) {
+
+    /* Typography */
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    /* Grids */
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Home - Welcome */
+    .welcome-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Home - Gallery Teaser */
+    .gallery-teaser-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* About - Story */
+    .about-story-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* About - Mission & Vision */
+    .mv-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Programs - Detail Grid */
+    .program-detail-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .program-detail:nth-child(odd) .program-detail-grid .program-detail-image {
+        order: 2;
+    }
+
+    .program-detail:nth-child(even) .program-detail-grid .program-detail-image {
+        order: -1;
+    }
+
+    /* Gallery Grid */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Inquiry */
+    .inquiry-grid {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1.5fr;
+    }
+}
+
+/* =============================================
+   DESKTOP — 1024px and above
+   ============================================= */
+@media (min-width: 1024px) {
+
+    /* Navigation */
+    .hamburger {
+        display: none !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+    }
+
+    /* Grids */
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Gallery Grid */
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Inquiry Map */
+    .inquiry-map iframe {
+        height: 300px;
+    }
+}
+
+/* =============================================
+   MOBILE — below 768px (mobile nav overrides)
+   ============================================= */
+@media (max-width: 767px) {
+
+    /* Navigation */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--color-text-light);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-md);
+        z-index: 1000;
+    }
+
+    .nav-links.nav-open {
+        display: flex;
+    }
+
+    .nav-link {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    /* Adjust padding for smaller hero */
+    .page-hero {
+        padding: 80px var(--space-md) var(--space-lg);
+    }
+
+    /* Programs: always stack */
+    .program-detail-grid .program-detail-image {
+        order: 0 !important;
+    }
+
+    /* Inquiry: stack columns */
+    .inquiry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================================
+   LARGE DESKTOP — 1440px and above
+   ============================================= */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
