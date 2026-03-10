@@ -548,6 +548,14 @@ p {
     line-height: 1.1;
 }
 
+.hero-logo-img {
+    max-width: clamp(280px, 50vw, 550px);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(2px 4px 15px rgba(0, 0, 0, 0.15));
+}
+
 .hero-subtitle {
     font-family: var(--font-body);
     font-size: clamp(16px, 2.5vw, 22px);
