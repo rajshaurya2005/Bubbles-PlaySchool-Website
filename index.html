@@ -11,12 +11,16 @@
     <meta property="og:title" content="Bubbles Playschool — Where Little Stars Shine">
     <meta property="og:description" content="A nurturing preschool offering Playgroup, Nursery, PP1, and PP2 programs.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/hero-bg.jpg">
+    <meta property="og:image" content="images/hero-bg.webp">
 
     <title>Bubbles Playschool — Where Little Stars Shine ⭐</title>
 
+    <!-- Preloads for Performance -->
+    <link rel="preload" href="images/bubbles-hero-logo.webp" as="image">
+    <link rel="preload" href="images/hero-bg.webp" as="image">
+
     <!-- Favicon -->
-    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="icon" href="images/logo.webp" type="image/webp">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +43,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="images/logo.png" alt="Bubbles Playschool Logo">
+                <img src="images/logo.webp" alt="Bubbles Playschool Logo">
                 <span>Bubbles <span class="logo-accent">Playschool</span></span>
             </a>
             <ul class="nav-links" id="navLinks">
@@ -68,7 +72,7 @@
             <div class="bubble bubble-5"></div>
             <div class="bubble bubble-6"></div>
             <div class="hero-content">
-                <h1 class="hero-title"><img src="images/bubbles-hero-logo.png" alt="Bubbles Playschool"
+                <h1 class="hero-title"><img src="images/bubbles-hero-logo.webp" alt="Bubbles Playschool"
                         class="hero-logo-img"></h1>
                 <p class="hero-subtitle">A Bubbly Playschool with Global Standards</p>
                 <p class="hero-subtitle">Where Little Stars Shine ⭐ — Nurturing curious minds and joyful hearts since
@@ -95,7 +99,7 @@
                         <a href="pages/about.html" class="btn btn-primary">Learn More About Us</a>
                     </div>
                     <div class="welcome-image fade-in fade-in-delay-2">
-                        <img src="images/welcome-illustration.png"
+                        <img src="images/welcome-illustration.webp" loading="lazy"
                             alt="Children learning and playing together at Bubbles Playschool">
                     </div>
                 </div>
@@ -201,15 +205,15 @@
                 <p class="section-subtitle fade-in">Take a peek at the colorful world inside our school.</p>
                 <div class="gallery-teaser-grid fade-in">
                     <div class="gallery-teaser-item">
-                        <img src="images/gallery/classroom-1.jpg" alt="Bright colorful classroom at Bubbles Playschool">
+                        <img src="images/gallery/classroom-1.webp" loading="lazy" alt="Bright colorful classroom at Bubbles Playschool">
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="gallery-teaser-item">
-                        <img src="images/gallery/playarea-1.jpg" alt="Children playing on outdoor playground">
+                        <img src="images/gallery/playarea-1.webp" loading="lazy" alt="Children playing on outdoor playground">
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                     <div class="gallery-teaser-item">
-                        <img src="images/gallery/art-1.jpg" alt="Kids doing arts and crafts">
+                        <img src="images/gallery/art-1.webp" loading="lazy" alt="Kids doing arts and crafts">
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
@@ -237,7 +241,7 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="images/logo.png" alt="Bubbles Playschool">
+                <img src="images/logo.webp" loading="lazy" alt="Bubbles Playschool">
                 <p class="footer-tagline">Where Little Stars Shine ⭐</p>
                 <div class="footer-socials">
                     <!-- TODO: Replace # with actual social media URLs -->
@@ -270,7 +274,7 @@
     <!-- === END FOOTER === -->
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 
 </body>
 
