@@ -1023,49 +1023,6 @@ p {
     color: var(--color-text-mid);
 }
 
-/* Director Section */
-.director {
-    background: var(--color-bg);
-}
-
-.director-card {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    background: var(--color-card-bg);
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl) var(--space-lg);
-    box-shadow: var(--shadow-card);
-}
-
-.director-photo {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto var(--space-md);
-    border: 5px solid var(--color-primary);
-    box-shadow: 0 4px 20px rgba(75, 189, 222, 0.2);
-}
-
-.director-name {
-    font-size: 24px;
-    margin-bottom: var(--space-xs);
-}
-
-.director-role {
-    color: var(--color-primary);
-    font-weight: 600;
-    font-size: 15px;
-    margin-bottom: var(--space-md);
-}
-
-.director-bio {
-    font-size: 15px;
-    color: var(--color-text-mid);
-    max-width: 550px;
-    margin: 0 auto;
-}
 
 /* Values */
 .values {
