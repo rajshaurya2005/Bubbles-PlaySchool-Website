@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
        ============================================= */
     function sendMailto(data) {
         // TODO: Replace with school email
-        var schoolEmail = 'info@bubblesplayschool.com';
+        var schoolEmail = 'bubblesplayschool@gmail.com';
         var subject = encodeURIComponent('New Inquiry from ' + data.parent_name);
         var body = encodeURIComponent(
             'Parent/Guardian Name: ' + data.parent_name + '\n' +
