@@ -11,17 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!form) return;
 
     /* =============================================
-       EMAILJS CONFIGURATION
+       FORMSPREE INTEGRATION
+       The form HTML handles the action URL and POST method.
        ============================================= */
-    // TODO: Replace with your EmailJS credentials
-    const SERVICE_ID = 'YOUR_SERVICE_ID';
-    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-
-    // Initialize EmailJS if available
-    if (typeof emailjs !== 'undefined' && PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
-        emailjs.init(PUBLIC_KEY);
-    }
 
     /* =============================================
        VALIDATION RULES
@@ -118,58 +110,41 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Collect form data
-        const formData = {
-            parent_name: form.querySelector('[name="parent_name"]').value,
-            child_name: form.querySelector('[name="child_name"]').value,
-            child_dob: form.querySelector('[name="child_dob"]').value,
-            program: form.querySelector('[name="program"]').value,
-            phone: form.querySelector('[name="phone"]').value,
-            email: form.querySelector('[name="email"]').value,
-            message: form.querySelector('[name="message"]').value || 'No additional message'
-        };
+        const formData = new FormData(form);
 
-        // Try EmailJS first, fallback to mailto
-        if (typeof emailjs !== 'undefined' && SERVICE_ID !== 'YOUR_SERVICE_ID') {
-            // EmailJS submission
-            const submitBtn = form.querySelector('.btn-submit');
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
+        // Submit via fetch to Formspree
+        const submitBtn = form.querySelector('.btn-submit');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
 
-            emailjs.send(SERVICE_ID, TEMPLATE_ID, formData)
-                .then(function () {
-                    showSuccess();
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                showSuccess();
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert("Oops! There was a problem submitting your form");
+                    }
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
                 })
-                .catch(function (error) {
-                    console.error('EmailJS Error:', error);
-                    // Fallback to mailto
-                    sendMailto(formData);
-                });
-        } else {
-            // mailto fallback
-            sendMailto(formData);
-        }
+            }
+        }).catch(error => {
+            console.error('Formspree Error:', error);
+            alert("Oops! There was a problem submitting your form");
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        });
     });
-
-    /* =============================================
-       MAILTO FALLBACK
-       ============================================= */
-    function sendMailto(data) {
-        // TODO: Replace with school email
-        var schoolEmail = 'bubblesplayschool@gmail.com';
-        var subject = encodeURIComponent('New Inquiry from ' + data.parent_name);
-        var body = encodeURIComponent(
-            'Parent/Guardian Name: ' + data.parent_name + '\n' +
-            'Child\'s Name: ' + data.child_name + '\n' +
-            'Child\'s Date of Birth: ' + data.child_dob + '\n' +
-            'Program Interested In: ' + data.program + '\n' +
-            'Phone: ' + data.phone + '\n' +
-            'Email: ' + data.email + '\n\n' +
-            'Message:\n' + data.message
-        );
-
-        window.location.href = 'mailto:' + schoolEmail + '?subject=' + subject + '&body=' + body;
-        showSuccess();
-    }
 
     /* =============================================
        SUCCESS MESSAGE
