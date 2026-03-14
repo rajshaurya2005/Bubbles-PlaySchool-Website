@@ -173,6 +173,30 @@
         order: 0 !important;
     }
 
+    /* Programs List adjustment */
+    .curriculum-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Floating Contact Buttons - move to bottom for easier access on mobile */
+    .floating-contact {
+        top: auto;
+        bottom: 20px;
+        right: 15px;
+        flex-direction: row;
+        transform: none;
+    }
+
+    .float-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .float-btn:hover::before {
+        display: none; /* Hide tooltips on touch devices */
+    }
+
     /* Inquiry: stack columns */
     .inquiry-grid {
         grid-template-columns: 1fr;
