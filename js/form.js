@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const form = document.getElementById('inquiryForm');
+    const form = document.getElementById('enquiryForm');
     const successMessage = document.getElementById('successMessage');
 
     if (!form) return;

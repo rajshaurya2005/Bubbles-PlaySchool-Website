@@ -1334,25 +1334,25 @@ p {
 }
 
 /* =============================================
-   INQUIRY PAGE
+   ENQUIRY PAGE
    ============================================= */
-.inquiry-intro {
+.enquiry-intro {
     background: var(--color-bg);
 }
 
-.inquiry-intro p {
+.enquiry-intro p {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
     font-size: 16px;
 }
 
-.inquiry-content {
+.enquiry-content {
     background: var(--color-bg);
     padding: 0 var(--space-md) var(--space-xl);
 }
 
-.inquiry-grid {
+.enquiry-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-lg);
@@ -1361,14 +1361,14 @@ p {
 }
 
 /* Form */
-.inquiry-form-card {
+.enquiry-form-card {
     background: var(--color-card-bg);
     border-radius: var(--radius-md);
     padding: var(--space-lg);
     box-shadow: var(--shadow-card);
 }
 
-.inquiry-form-card h3 {
+.enquiry-form-card h3 {
     font-size: 22px;
     margin-bottom: var(--space-lg);
     display: flex;
@@ -1376,7 +1376,7 @@ p {
     gap: var(--space-sm);
 }
 
-.inquiry-form-card h3 i {
+.enquiry-form-card h3 i {
     color: var(--color-primary);
 }
 
@@ -1449,14 +1449,14 @@ p {
 }
 
 /* Contact Details */
-.inquiry-contact-card {
+.enquiry-contact-card {
     background: var(--color-card-bg);
     border-radius: var(--radius-md);
     padding: var(--space-lg);
     box-shadow: var(--shadow-card);
 }
 
-.inquiry-contact-card h3 {
+.enquiry-contact-card h3 {
     font-size: 22px;
     margin-bottom: var(--space-lg);
     display: flex;
@@ -1464,7 +1464,7 @@ p {
     gap: var(--space-sm);
 }
 
-.inquiry-contact-card h3 i {
+.enquiry-contact-card h3 i {
     color: var(--color-primary);
 }
 
@@ -1503,14 +1503,14 @@ p {
 }
 
 /* Map */
-.inquiry-map {
+.enquiry-map {
     margin-top: var(--space-md);
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-card);
 }
 
-.inquiry-map iframe {
+.enquiry-map iframe {
     width: 100%;
     height: 250px;
     border: none;
@@ -1728,4 +1728,92 @@ p {
 .card-pp1-accent .learn-more,
 .card-pp2-accent .learn-more {
     color: var(--color-accent);
+}
+
+/* =========================================
+   HERO STAR BADGE + PILL BADGE
+   ========================================= */
+
+.hero-starburst-badge {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    animation: starburstBounce 3.5s ease-in-out infinite;
+    filter: drop-shadow(0 8px 15px rgba(227, 38, 54, 0.4));
+}
+
+.starburst-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.starburst-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.1;
+    color: white;
+}
+
+.starburst-text .text-top {
+    font-family: 'Fredoka One', cursive;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.starburst-text .text-bottom {
+    font-family: 'Fredoka One', cursive;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+@keyframes starburstBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg) scale(1);
+    }
+    50% {
+        transform: translateY(-12px) rotate(3deg) scale(1.05);
+    }
+}
+
+.hero-pill-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 20px;
+    border-radius: var(--radius-full);
+    margin-bottom: 14px;
+    letter-spacing: 0.4px;
+    backdrop-filter: blur(4px);
+}
+
+/* =========================================
+   FACEBOOK FLOATING BUTTON
+   ========================================= */
+
+.float-btn.facebook {
+    background: linear-gradient(135deg, #1877f2, #0d5fcc);
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.45);
+}
+
+.float-btn.facebook:hover {
+    background: linear-gradient(135deg, #0d5fcc, #0a47a0);
+    transform: scale(1.12);
+    box-shadow: 0 6px 22px rgba(24, 119, 242, 0.6);
 }
